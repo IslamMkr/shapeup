@@ -1,0 +1,17 @@
+{
+	"name": "shapeup",
+	"version": "1.0.0",
+	"description": "ShapeUp App - Shape your life",
+	"main": "index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+		"dev:server": "cd applications/server && npm run start",
+		"dev:client": "cd applications/client && npm run dev"
+	},
+	"author": "Islam Mokrane",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^9.1.0"
+	}
+}
