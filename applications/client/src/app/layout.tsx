@@ -1,8 +1,12 @@
-import type { Metadata } from "next"
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter"
+import Grid from "@mui/material/Grid2"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+
 import StoreProvider from "./providers/StoreProvider"
 import AuthGuard from "./guards/AuthGuard"
-import { Inter } from "next/font/google"
+import Header from "./components/Header/Header"
+
 import "./globals.css"
 
 // If loading a variable font, you don't need to specify the font weight
@@ -10,7 +14,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
 	title: "ShapeUp | Take control of your life",
-	description: "ShapeUp is a fitness app that helps you take control of your life.",
+	description:
+		"ShapeUp is the ultimate app for tracking weight, managing your diet, and connecting with a fitness community. Start your journey today!",
 }
 
 export default function RootLayout({
@@ -23,7 +28,12 @@ export default function RootLayout({
 			<body className={`${inter.variable}`}>
 				<AppRouterCacheProvider>
 					<StoreProvider>
-						<AuthGuard>{children}</AuthGuard>
+						<AuthGuard>
+							<Grid container direction="column">
+								<Header />
+								<main>{children}</main>
+							</Grid>
+						</AuthGuard>
 					</StoreProvider>
 				</AppRouterCacheProvider>
 			</body>

@@ -5,12 +5,16 @@ interface Route {
 
 const routes: Route[] = [
 	{
-		path: "/login",
+		path: "/register",
+		isProtected: false,
+	},
+	{
+		path: "/tools",
 		isProtected: false,
 	},
 	{
 		path: "/",
-		isProtected: true,
+		isProtected: false,
 	},
 	{
 		path: "/home",

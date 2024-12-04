@@ -20,12 +20,12 @@ const AuthGuard = ({ children }: AuthGuardProps) => {
 		if (isAuthenticated) {
 			return <NotFound />
 		} else {
-			redirect("login")
+			redirect("/")
 		}
 	} else if (!currentRoute.isProtected && isAuthenticated) {
-		redirect("/")
+		redirect("/home")
 	} else if (currentRoute.isProtected && !isAuthenticated) {
-		redirect("/login")
+		redirect("/")
 	} else {
 		return <>{children}</>
 	}
