@@ -21,12 +21,12 @@ export default function Home() {
 					height: "calc(100vh - 56px)",
 					gap: 40,
 					padding: "0px 20px",
-					background: "#f5f5f5",
+					background: "#ffffff",
 				}}>
-				<h1 style={{ maxWidth: 550, textAlign: "center" }}>
+				<h1 style={{ maxWidth: 550, textAlign: "center", fontSize: 50, fontWeight: 1000 }}>
 					Your Personal Weight & Diet Tracker with Community Support
 				</h1>
-				<p style={{ maxWidth: 550, textAlign: "center" }}>
+				<p style={{ maxWidth: 550, textAlign: "center", fontSize: 20 }}>
 					Track your progress, achieve your goals, and connect with a supportive community. ShapeUp makes fitness fun
 					and achievable!
 				</p>
@@ -51,12 +51,17 @@ export default function Home() {
 				</Grid>
 			</Grid>
 
-			<Grid container direction="column" style={{ gap: 20, width: "100%", padding: "0px 20px" }}>
+			<Grid
+				container
+				direction="column"
+				alignItems="center"
+				style={{ gap: 20, width: "100%", padding: "0px 20px 50px 20px" }}>
 				<Grid
 					container
 					direction="column"
 					style={{
 						width: "100%",
+						maxWidth: 550,
 						gap: 10,
 						background: "white",
 						padding: 20,
@@ -74,6 +79,7 @@ export default function Home() {
 					direction="column"
 					style={{
 						width: "100%",
+						maxWidth: 550,
 						gap: 10,
 						background: "white",
 						padding: 20,
@@ -91,6 +97,7 @@ export default function Home() {
 					direction="column"
 					style={{
 						width: "100%",
+						maxWidth: 550,
 						gap: 10,
 						background: "white",
 						padding: 20,
@@ -108,6 +115,7 @@ export default function Home() {
 					direction="column"
 					style={{
 						width: "100%",
+						maxWidth: 550,
 						gap: 10,
 						background: "white",
 						padding: 20,
@@ -125,6 +133,7 @@ export default function Home() {
 					direction="column"
 					style={{
 						width: "100%",
+						maxWidth: 550,
 						gap: 10,
 						background: "white",
 						padding: 20,

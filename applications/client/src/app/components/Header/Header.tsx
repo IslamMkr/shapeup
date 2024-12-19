@@ -28,7 +28,7 @@ const Header = () => {
 			<Grid className={styles.headerContent}>
 				<Link href="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
 					<Image src="/shapeup.png" alt="logo" width={36} height={32} style={{ borderRadius: 4 }} />
-					<h1 style={{ fontSize: "20px" }}>Shape Up</h1>
+					<p style={{ fontSize: "20px", fontWeight: 700 }}>Shape Up</p>
 				</Link>
 
 				{!isAuthenticated && (
